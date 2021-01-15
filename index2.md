@@ -1,20 +1,22 @@
-## Main aim of this project
+## Main Aim of This Project
+### Topic
 A data analysis engine with 3 years of data media posts on assistive tech terms.
+### Target
+To bulid a multi-fuctional data engine that could support users accessing, uploading and visualising 
+the information they need about assistive technologies.
 
-To build a website system that supports “accessible non-top-down data source for the general
-public”, which allows users to upload/search/comment on a set of user defined AT articles. Those
-articles will be automatically categorised and displayed by specific algorithms.
+## Basic Plan
+We will provide a comprehensive platform to encourage users to share their stories to support the 
+researches of assistive technologies
 
-## Current plan
-Data source: Django API
+Framework: Django
 
-Website: NodeJs/HTML
+Main programming langauge: Python
 
-Main programming langauge: python
+Web: HTML
 
-Data we have: A collection of AT EventTribute events and AT web pages
+Database: SQLite
 
-Categorization : undecided
+Dataset: A collection of AT EventTribute events and AT web pages
 
-Auto-categorize algorithm: unknown
 
