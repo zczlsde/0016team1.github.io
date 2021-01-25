@@ -11,16 +11,11 @@ Location:
 
 Source: 
         
-        uri = models.CharField(max_length=500, unique=True)
-        
-        name = models.CharField(max_length=500)
-        
-        source_importance = models.IntegerField()
-        
-        alexa_global_site_importance = models.IntegerField(null=True, blank=True)
-        
+        uri = models.CharField(max_length=500, unique=True)  
+        name = models.CharField(max_length=500)  
+        source_importance = models.IntegerField()  
+        alexa_global_site_importance = models.IntegerField(null=True, blank=True)      
         alexa_country_site_importance = models.IntegerField(null=True, blank=True)
-        
         location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True)
 
 Link: 
@@ -30,19 +25,14 @@ Link:
 SocialMediaSharing: 
                     
                     facebook_shares = models.IntegerField(null=True, blank=True)
-                    
                     google_plus_shares = models.IntegerField(null=True, blank=True)
-                    
-                    pinterest_shares = models.IntegerField(null=True, blank=True)
-                    
+                    pinterest_shares = models.IntegerField(null=True, blank=True) 
                     linkedin_shares = models.IntegerField(null=True, blank=True)
 
 Author: 
         
         uri = models.CharField(max_length=500, unique=True)
-        
-        name = models.CharField(max_length=500)
-        
+        name = models.CharField(max_length=500)    
         is_agency = models.BooleanField()
 
 Article: 
@@ -55,7 +45,7 @@ Article:
          data_type = models.CharField(max_length=4, help_text="news, blog or pr")
          image = models.URLField(null=True, blank=True)
          source = models.ForeignKey(Source, on_delete=models.CASCADE)
-    l    links = models.ManyToManyField(Link)
+         links = models.ManyToManyField(Link)
          location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True)
          authors = models.ManyToManyField(Author)
          shares = models.ForeignKey(SocialMediaSharing, on_delete=models.CASCADE, null=True, blank=True)
@@ -65,7 +55,8 @@ Article:
 
 Primary key would be created by Django model directly, while foreign key and manytomany field are described in model definition.
 
-## Update of our code:
+## Update of our code
+
 The first action to our code is to return the original version and recreate Django project because of misunderstanding of Django model.
 Then, all definitions of models designed currently are declared in models.py of class AT_data (Create by startapp).
 Next, AT_data is added in installed app of setting.py and makemigaration and migrate instructions are executed by manage.py.
