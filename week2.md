@@ -5,9 +5,13 @@ There are 415 files in the main csv file called Articles and our analysis would 
 Some of the tables and fields are not necessary in our project so they are not included in our models.
 Currently, only six tables are included in our database design, table name and its fileds are shown below:
 
-Location: name = models.CharField(max_length=200)
+Location: 
+        
+        name = models.CharField(max_length=200)
 
-Source: uri = models.CharField(max_length=500, unique=True)
+Source: 
+        
+        uri = models.CharField(max_length=500, unique=True)
         
         name = models.CharField(max_length=500)
         
@@ -19,9 +23,13 @@ Source: uri = models.CharField(max_length=500, unique=True)
         
         location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True)
 
-Link: url = models.URLField(unique=True)
+Link: 
+        
+        url = models.URLField(unique=True)
 
-SocialMediaSharing: facebook_shares = models.IntegerField(null=True, blank=True)
+SocialMediaSharing: 
+                    
+                    facebook_shares = models.IntegerField(null=True, blank=True)
                     
                     google_plus_shares = models.IntegerField(null=True, blank=True)
                     
@@ -29,13 +37,17 @@ SocialMediaSharing: facebook_shares = models.IntegerField(null=True, blank=True)
                     
                     linkedin_shares = models.IntegerField(null=True, blank=True)
 
-Author: uri = models.CharField(max_length=500, unique=True)
+Author: 
+        
+        uri = models.CharField(max_length=500, unique=True)
         
         name = models.CharField(max_length=500)
         
         is_agency = models.BooleanField()
 
-Article: url = models.URLField()
+Article: 
+         
+         url = models.URLField()
          title = models.CharField(max_length=1000)
          body = models.TextField()
          datetime_published = models.DateTimeField()
