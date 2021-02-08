@@ -18,7 +18,7 @@ This design came from visualization of eventribute data using a tree structure o
 A local server that supports the running of our data engine(including visualiser and the
 database)
 
-## Should have:
+##Should have:
 User accessibility designs in all web-pages required
 
 Mobile adaptive system to suit different terminal devices(The above requirements will be considered with in the design of backend system for server
